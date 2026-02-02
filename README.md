@@ -232,6 +232,8 @@ Swagger UI is used as a functional interface to explore and test all backend API
 ### 🔹 Swagger UI – API Overview
 ![Swagger UI Home](screenshots/swagger-home.png)
 
+### JWT Authorization
+![JWT Auth](screenshots/swagger-auth.png)
 
 ### 🔹 Secured API Testing
 ![Swagger API Test](screenshots/swagger-api-test.png)
