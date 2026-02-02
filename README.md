@@ -1,6 +1,5 @@
 # SkillSwap – Secure Skill Exchange Platform with Wallet & Escrow Management
 
-
 ---
 
 ## Project Type : Backend Project (Web-based REST API System)
@@ -330,6 +329,33 @@ CORS_ALLOWED_ORIGINS=http://localhost:3000,http://localhost:5173
 Spring Boot automatically reads these variables using `${VAR_NAME}` placeholders in `application.properties`.
 
 ---
+## 🧪 Test Profile & H2 Database Configuration
+
+This project uses a **separate test profile** to ensure that automated tests do not depend on the production or development database.
+
+### 🔹 Why Test Profile?
+
+- Prevents accidental use of real **MySQL** data during tests
+- Enables **faster and isolated** test execution
+- Supports **clean CI/CD pipelines** and reliable Maven builds
+
+### 🔹 Test Database (H2 – In-Memory)
+
+For testing, the application uses an **H2 In-Memory Database**, which is:
+
+- Lightweight and fast
+- Auto-configured by Spring Boot
+- Reset on every test run to ensure clean state
+
+### 📌 Active Profile
+
+
+
+###### spring.profiles.active=test
+### 🔹 Run Tests
+```bash
+mvn test
+```
 
 ### 🔹 Run the Application (Without Docker)
 
@@ -372,7 +398,7 @@ Swagger UI acts as a functional interface to:
 
 ---
 
-### 🔹 Run with Docker (Optional)
+### 🔹 Run with Docker
 
 #### Build Docker Image
 
@@ -422,8 +448,6 @@ docker run -p 8080:8080 --env-file .env skillswap-backend
 - Clean layered architecture
 
 ---
-
-
 
 
 ## Conclusion
