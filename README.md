@@ -213,6 +213,20 @@ Swagger UI is used as a functional interface to visualize, test, and interact wi
 
 ---
 
+## 📸 Swagger UI Screenshots
+
+Swagger UI is used as a functional interface to explore and test all backend APIs.
+
+### 🔹 Swagger UI – API Overview
+![Swagger UI Home](screenshots/swagger-home.png)
+
+
+### 🔹 Secured API Testing
+![Swagger API Test](screenshots/swagger-api-test.png)
+
+---
+
+
 ## Dockerized Deployment
 
 * **Docker:** Deployed backend for containerized, scalable production-ready setup
@@ -233,6 +247,170 @@ Swagger UI is used as a functional interface to visualize, test, and interact wi
 * Notifications & Messaging
 
 ---
+
+## 🛠️ Installation & Run Instructions
+
+This section explains how to set up and run the **SkillSwap Backend API** locally for development and testing.
+
+---
+
+### 🔹 Prerequisites
+
+Ensure the following are installed on your system:
+
+* **Java 17+**
+* **Spring Boot 3.x**
+* **Maven 3.8+**
+* **MySQL 8+**
+* **Git**
+* **Swagger / OpenAPI 3**
+* **Docker** (optional, for containerized deployment)
+
+---
+
+### 🔹 Clone the Repository
+
+```bash
+git clone https://github.com/amitkumar-tech07/skillswap-platform-backend
+cd skillswap-platform-backend
+```
+
+---
+
+### 🔹 Database Setup (MySQL)
+
+1. Create a database:
+
+```sql
+CREATE DATABASE skillswapDB;
+```
+
+2. Ensure MySQL is running on port `3306`.
+
+---
+
+### 🔹 Environment Variables Setup
+
+Create a `.env` file in the project root directory (**do not commit this file to GitHub**):
+
+```env
+# ================= Database =================
+DB_URL=jdbc:mysql://localhost:3306/skillswapDB
+DB_USERNAME=root
+DB_PASSWORD=your_db_password
+
+# ================= JWT =================
+JWT_SECRET=your_super_secret_jwt_key
+
+# ================= Mail =================
+MAIL_USERNAME=your_email@gmail.com
+MAIL_PASSWORD=your_gmail_app_password
+
+# ================= Server =================
+SERVER_PORT=8080
+
+# ================= CORS =================
+CORS_ALLOWED_ORIGINS=http://localhost:3000,http://localhost:5173
+```
+
+Spring Boot automatically reads these variables using `${VAR_NAME}` placeholders in `application.properties`.
+
+---
+
+### 🔹 Run the Application (Without Docker)
+
+#### Option 1: Using Maven
+
+```bash
+mvn spring-boot:run
+```
+
+#### Option 2: Using JAR
+
+```bash
+mvn clean package
+java -jar target/skillswap-backend.jar
+```
+
+---
+
+### 🔹 Access the Application
+
+* **Base API URL:**
+
+```
+http://localhost:8080
+```
+
+* **Swagger UI (API Interface):**
+
+```
+http://localhost:8080/swagger-ui/index.html
+```
+
+Swagger UI acts as a functional interface to:
+
+* Register users
+* Verify OTP
+* Authenticate using JWT
+* Test secured APIs
+* Execute complete booking and escrow workflows
+
+---
+
+### 🔹 Run with Docker (Optional)
+
+#### Build Docker Image
+
+```bash
+docker build -t skillswap-backend .
+```
+
+#### Run Docker Container
+
+```bash
+docker run -p 8080:8080 --env-file .env skillswap-backend
+```
+
+---
+
+### 🔹 Production Notes
+
+* Use **Flyway / Liquibase** instead of `ddl-auto=update`
+* Disable SQL debug logs
+* Enable HTTPS
+* Store secrets in secure vaults or cloud secret managers
+* Use managed databases for production
+
+---
+
+### 🔹 Common Issues
+
+| Issue                      | Solution                                            |
+| -------------------------- | --------------------------------------------------- |
+| Database connection failed | Verify MySQL is running and credentials are correct |
+| JWT errors                 | Ensure `JWT_SECRET` is configured                   |
+| OTP email not sent         | Use Gmail App Password                              |
+| CORS issues                | Update `CORS_ALLOWED_ORIGINS`                       |
+
+---
+
+#### - The backend is now ready for API testing, frontend integration, and cloud deployment.
+
+
+---
+
+## Key Backend Concepts Demonstrated
+- Transaction management & ACID compliance
+- Escrow-based payment workflows
+- Secure authentication & authorization
+- Concurrency control with optimistic locking
+- Clean layered architecture
+
+---
+
+
+
 
 ## Conclusion
 
