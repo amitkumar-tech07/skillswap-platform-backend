@@ -139,6 +139,18 @@ User → Booking → Escrow Lock → Service Completed → Escrow Release → Pr
 
 ---
 
+## 🗂️ ER Diagram (Database Design)
+
+The following Entity Relationship (ER) diagram represents the core database structure of the SkillSwap platform.
+It illustrates entity relationships, primary keys, foreign keys, and normalization (3NF) used to ensure data
+integrity, scalability, and efficient querying.
+
+![SkillSwap ER Diagram](screenshots/er-diagram.png)
+
+> The database is fully normalized (3NF) and designed to support secure transactional workflows,
+> wallet operations, and escrow-based payments.
+---
+
 ## Database Design (3NF)
 
 The database is fully normalized (3NF) for data integrity and performance.
