@@ -17,7 +17,7 @@ import java.util.List;
 
 
 @Tag(
-        name = "User Skill APIs",
+        name = "06. User Skill APIs",
         description = """
 🔐 Authenticated Skill Management APIs
 

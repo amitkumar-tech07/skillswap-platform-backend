@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Tag(name = "Admin Transactions APIs", description = "Admin-level transaction management, reporting, and analytics")
+@Tag(name = "16. Admin Transactions APIs", description = "Admin-level transaction management, reporting, and analytics")
 @RestController
 @RequiredArgsConstructor
 @PreAuthorize("hasRole('ADMIN')")

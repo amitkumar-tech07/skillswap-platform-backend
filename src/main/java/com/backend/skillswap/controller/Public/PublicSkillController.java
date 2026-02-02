@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @Tag(
-        name = "Public Skill APIs",
+        name = "03. Public Skill APIs",
         description = """
 🌍 Public Skill Browsing APIs
 

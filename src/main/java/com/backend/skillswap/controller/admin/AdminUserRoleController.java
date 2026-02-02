@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/admin/users")
 @RequiredArgsConstructor
 @Tag(
-        name = "Admin User Role APIs",
+        name = "14. Admin User Role APIs",
         description = """
 🔐 Admin-only user role management
 

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/admin/users")
 @PreAuthorize("hasRole('ADMIN')")
-@Tag(name = "Admin User Profile APIs", description = "Admin APIs to manage user profiles")
+@Tag(name = "17. Admin User Profile APIs", description = "Admin APIs to manage user profiles")
 @RequiredArgsConstructor
 public class AdminUserProfileController {
 

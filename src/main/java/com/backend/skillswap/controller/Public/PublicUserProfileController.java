@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/public/users")
 @Tag(
-        name = "Public User Profile APIs",
+        name = "04. Public User Profile APIs",
         description = "Public APIs to view user profile information"
 )
 @RequiredArgsConstructor

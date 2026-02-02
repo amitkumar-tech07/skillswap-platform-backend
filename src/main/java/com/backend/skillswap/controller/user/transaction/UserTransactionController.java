@@ -23,7 +23,7 @@ import java.util.List;
 @RequestMapping("/api/user/transactions")
 @RequiredArgsConstructor
 @PreAuthorize("hasRole('USER')")
-@Tag(name = "User Transactions APIs", description = "Wallet, Escrow, Transactions & Analytics")
+@Tag(name = "13. User Transactions APIs", description = "Wallet, Escrow, Transactions & Analytics")
 public class UserTransactionController {
 
     private final TransactionService transactionService;

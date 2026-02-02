@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Tag(
-        name = "User Skill Request APIs",
+        name = "07. User Skill Request APIs",
         description = """
 Skill request APIs for USERS (request sender).
 

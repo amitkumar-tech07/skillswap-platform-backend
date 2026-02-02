@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Tag(
-        name = "Shared Skill Request APIs",
+        name = "09. Shared Skill Request APIs",
         description = """
 Shared skill request actions.
 

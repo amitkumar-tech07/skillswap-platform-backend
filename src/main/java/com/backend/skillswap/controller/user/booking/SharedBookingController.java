@@ -20,7 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/bookings/shared")
 @RequiredArgsConstructor
-@Tag(name = "Shared Booking APIs", description = "Endpoints usable by both User & Provider")
+@Tag(name = "10. Shared Booking APIs", description = "Endpoints usable by both User & Provider")
 public class SharedBookingController {
 
     private final BookingService bookingService;

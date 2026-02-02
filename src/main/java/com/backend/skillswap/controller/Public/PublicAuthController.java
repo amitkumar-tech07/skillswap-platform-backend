@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Tag(
-        name = "Public Authentication & Authorization APIs",
+        name = "01. Public Authentication & Authorization APIs",
         description = """
 Handles complete authentication lifecycle:
 

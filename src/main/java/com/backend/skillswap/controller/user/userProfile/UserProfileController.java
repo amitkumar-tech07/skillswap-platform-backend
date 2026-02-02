@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Tag(
-        name = "User Profile APIs",
+        name = "05. User Profile APIs",
         description = """
 🔐 Authenticated User Profile APIs
 

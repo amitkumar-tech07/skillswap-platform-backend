@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping("/api/admin/skills")
 @RequiredArgsConstructor
 @Tag(
-        name = "Admin Skill Moderation APIs",
+        name = "15. Admin Skill Moderation APIs",
         description = """
 🛠 Admin skill moderation
 

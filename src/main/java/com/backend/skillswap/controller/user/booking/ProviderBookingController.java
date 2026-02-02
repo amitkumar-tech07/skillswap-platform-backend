@@ -25,7 +25,7 @@ import java.util.List;
 @RequestMapping("/api/bookings/provider")
 @RequiredArgsConstructor
 @Tag(
-        name = "Provider Booking APIs",
+        name = "12. Provider Booking APIs",
         description = """
 Booking APIs for PROVIDERS (skill owner).
 

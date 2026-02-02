@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Tag(
-        name = "Public Password Reset & Account Recovery APIs",
+        name = "02. Public Password Reset & Account Recovery APIs",
         description = "Secure APIs for password reset using email OTP verification"
 )
 @RequiredArgsConstructor
