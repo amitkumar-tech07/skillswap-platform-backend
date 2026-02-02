@@ -34,7 +34,6 @@ build/
 
 # ================= Sensitive files =================
 .env
-application.properties
 
 
 
