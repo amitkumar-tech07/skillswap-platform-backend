@@ -360,10 +360,20 @@ mvn test
 ### 🔹 Run the Application (Without Docker)
 
 #### Option 1: Using Maven
-
+> **Note:** When running the application locally without Docker, environment variables must be set manually.
+> The `.env` file is used only for Docker-based execution and is not loaded automatically by Spring Boot.
+ - On Windows PowerShell, set environment variables:
 ```bash
-mvn spring-boot:run
+$env:JWT_SECRET="secret_key"
+$env:DB_USERNAME="root"
+$env:DB_PASSWORD="your_db_password"
 ```
+
+ - then run 
+```bash
+mvn spring-boot:run  
+```
+---
 
 #### Option 2: Using JAR
 
@@ -374,6 +384,27 @@ java -jar target/skillswap-backend.jar
 
 ---
 
+---
+#### Option 3: Using IntelliJ IDEA
+ - Open the main application class (e.g., SkillSwapApplication.java) in IntelliJ.
+ - Set environment variables for the run configuration:
+1. Go to Run → Edit Configurations
+2. Select your Spring Boot application
+3. Add the following under Environment variables:
+4. 
+```bash
+JWT_SECRET=secret_key
+DB_USERNAME=root
+DB_PASSWORD=your_db_password
+```
+- Click the green ▶️ Run button to start the application.
+ - Access Swagger UI at:
+```bash
+  http://localhost:8080/swagger-ui/index.html
+```
+
+> This is the **3 clear ways** to run the backend without Docker — Maven, JAR, or directly in IntelliJ.
+---
 ### 🔹 Access the Application
 
 * **Base API URL:**
@@ -398,18 +429,33 @@ Swagger UI acts as a functional interface to:
 
 ---
 
-### 🔹 Run with Docker
+## 🔹 Run with Docker
+This section explains how to containerize and run the SkillSwap backend using Docker.
 
-#### Build Docker Image
+### 🔹 Build the Application JAR
+Before building the Docker image, generate the executable JAR:
+```bash
+mvn clean install
+```
+This creates the JAR file inside the target/ directory.
+####  🛠️ Build Docker Image
+
+Navigate to the project root directory and build the Docker image using the following command:
 
 ```bash
 docker build -t skillswap-backend .
 ```
 
-#### Run Docker Container
+#### ▶️ Run Docker Container
+Run the Docker container by mapping port 8080 and loading environment variables from the .env file:
 
 ```bash
 docker run -p 8080:8080 --env-file .env skillswap-backend
+```
+
+After the container starts successfully, the backend API will be accessible at: 
+```bash
+http://localhost:8080
 ```
 
 ---
